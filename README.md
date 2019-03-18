@@ -4,4 +4,4 @@ perguntas e respostas para diferentes categorias (Desporto,Arte,História,Ciênc
 cada categoria será alojada numa tabela de base de dados diferente
 
 
-![alt text](https://github.com/Pedromatos98/Quizz/blob/master/Quizz.png)
+
