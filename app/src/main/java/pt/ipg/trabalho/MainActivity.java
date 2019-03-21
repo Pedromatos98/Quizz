@@ -50,4 +50,10 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(intent);
     }
+    public void perfil (View view) {
+        Intent intent = new Intent(this, Perfil.class);
+        intent.putExtra(AppConsts.MESSAGE, "Perfil");
+
+        startActivity(intent);
+    }
 }
