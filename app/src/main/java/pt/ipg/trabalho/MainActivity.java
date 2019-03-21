@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void startGame (View view) {
         Intent intent = new Intent(this, jogoActivity.class);
+        intent.putExtra(AppConsts.MESSAGE, "jogo iniciado");
 
         startActivity(intent);
     }

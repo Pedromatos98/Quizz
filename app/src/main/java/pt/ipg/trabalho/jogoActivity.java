@@ -1,5 +1,6 @@
 package pt.ipg.trabalho;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.Toast;
 
 public class jogoActivity extends AppCompatActivity {
 
@@ -20,6 +22,13 @@ public class jogoActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        startGame();
     }
+    private void startGame () {
+        Intent intent = getIntent();
 
+        String message = intent.getStringExtra(AppConsts.MESSAGE);
+
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
 }
