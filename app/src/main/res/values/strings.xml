@@ -4,4 +4,7 @@
     <string name="title_activity_menu">Menu</string>
     <string name="title_activity_jogo">jogoActivity</string>
     <string name="title_activity_perfil">Perfil</string>
+    <string name="quizz">Quizz</string>
+    <string name="iniciar_jogo">Iniciar Jogo</string>
+    <string name="perfil">Perfil</string>
 </resources>
