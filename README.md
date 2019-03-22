@@ -1,7 +1,7 @@
 # Quizz
-jogo de cultura geral 
-perguntas e respostas para diferentes categorias (Desporto,Arte,História,Ciência) divididas por tabelas em base de dados
-cada categoria será alojada numa tabela de base de dados diferente
+Jogo de cultura geral 
+Perguntas e respostas para diferentes categorias (Desporto,Arte,História,Ciência), perguntas e respostas ficarão em tabelas distintas 
+Existirá também uma tabela que permite guardar dados do utilizador tais como a sua identificação, % de acerto e a melhor categoria
 
 
 
