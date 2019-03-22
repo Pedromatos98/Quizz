@@ -1,5 +1,6 @@
 package pt.ipg.trabalho;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void startGame (View view) {
         Intent intent = new Intent(this, jogoActivity.class);
-        intent.putExtra(AppConsts.MESSAGE, "jogo iniciado");
+        intent.putExtra(AppConsts.MESSAGE, "Jogo iniciado");
 
         startActivity(intent);
     }
