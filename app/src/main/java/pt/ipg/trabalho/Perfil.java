@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Perfil extends AppCompatActivity {
@@ -30,5 +32,27 @@ public class Perfil extends AppCompatActivity {
         String message = intent.getStringExtra(AppConsts.MESSAGE);
 
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+    public void guardar (View view) {
+
+        EditText editTextMessage = (EditText) findViewById(R.id.editText);
+
+        String message = editTextMessage.getText().toString();
+
+        if(message.trim().length()== 0){
+            editTextMessage.setError("Introduza Nome de Utilizador");
+
+            editTextMessage.requestFocus();
+
+            return;
+        }
+        Intent intent = new Intent(this, MainActivity.class);
+
+        intent.putExtra(AppConsts.MESSAGE, "Nome de Utilizador Guardado");
+
+        startActivity(intent);
+    }
+    public void cancel (View view) {
+        finish();
     }
 }

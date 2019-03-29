@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">trabalho</string>
+    <string name="profile">Perfil</string>
+    <string name="name">Nome</string>
+    <string name="Start_Game">Iniciar Jogo</string>
+    <string name="action_settings">Configurações</string>
+    <string name="title_activity_perfil">Perfil</string>
+    <string name="title_activity_jogo">Jogo</string>
+    <string name="save">Guardar</string>
+    <string name="user_name">Nome Utilizador</string>
+    <string name="cancel">Cancelar</string>
+</resources>
