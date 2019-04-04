@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">trabalho</string>
     <string name="profile">Perfil</string>
     <string name="Start_Game">Iniciar Jogo</string>
     <string name="action_settings">Configurações</string>
@@ -9,4 +8,14 @@
     <string name="save">Guardar</string>
     <string name="user_name">Nome Utilizador</string>
     <string name="cancel">Cancelar</string>
+    <string name="edit">Editar</string>
+    <string name="title_activity_categories">Categorias</string>
+    <string name="delete">Eliminar</string>
+    <string name="save1">Guardar</string>
+    <string name="cancel1">Cancelar</string>
+    <string name="categories">Categorias</string>
+    <string name="title_activity_delete">Eliminar</string>
+    <string name="delete1">Eliminar</string>
+    <string name="cancel2">Cancelar</string>
+    <string name="user_name1">Nome Utilizador</string>
 </resources>

@@ -35,20 +35,21 @@ public class Perfil extends AppCompatActivity {
     }
     public void guardar (View view) {
 
-        EditText editTextMessage = (EditText) findViewById(R.id.editText);
+        EditText editTextMessage = (EditText) findViewById(R.id.EditTextUtilizador);
 
         String message = editTextMessage.getText().toString();
 
         if(message.trim().length()== 0){
-            editTextMessage.setError("Introduza Nome de Utilizador");
+            editTextMessage.setError("Enter User Name");
 
             editTextMessage.requestFocus();
 
             return;
         }
+
         Intent intent = new Intent(this, MainActivity.class);
 
-        intent.putExtra(AppConsts.MESSAGE, "Nome de Utilizador Guardado");
+        Toast.makeText(this, "User name added", Toast.LENGTH_SHORT).show();
 
         startActivity(intent);
     }

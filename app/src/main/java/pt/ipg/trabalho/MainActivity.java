@@ -48,21 +48,26 @@ public class MainActivity extends AppCompatActivity {
     }
     public void startGame (View view) {
         Intent intent = new Intent(this, jogoActivity.class);
-        intent.putExtra(AppConsts.MESSAGE, "Jogo iniciado");
+        intent.putExtra(AppConsts.MESSAGE, "Game Started");
 
         startActivity(intent);
     }
     public void perfil (View view) {
         Intent intent = new Intent(this, Perfil.class);
-        intent.putExtra(AppConsts.MESSAGE, "Perfil");
+        intent.putExtra(AppConsts.MESSAGE, "Profile");
 
         startActivity(intent);
     }
     public void guardar (View view) {
         Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra(AppConsts.MESSAGE, "Nome de Utilizador Guardado");
+        intent.putExtra(AppConsts.MESSAGE, "User Name Saved");
 
         startActivity(intent);
         }
+    public void categories (View view) {
+        Intent intent = new Intent(this, Categories.class);
+        intent.putExtra(AppConsts.MESSAGE, "Categories");
 
+        startActivity(intent);
+    }
 }

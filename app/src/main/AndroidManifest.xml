@@ -10,6 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Delete"
+            android:label="@string/title_activity_delete"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Categories"
+            android:label="@string/title_activity_categories"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pt.ipg.trabalho.MainActivity" />
+        </activity>
+        <activity
             android:name=".Perfil"
             android:label="@string/title_activity_perfil"
             android:parentActivityName=".MainActivity"
