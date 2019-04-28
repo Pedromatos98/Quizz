@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
-import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Categories extends AppCompatActivity {
@@ -23,39 +23,57 @@ public class Categories extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        categories ();
+        mostraMensagem();
     }
-    public void save(View view) {
-        EditText editTextCategories = (EditText) findViewById(R.id.editTextCategories);
-        String textoCategorias = editTextCategories.getText().toString();
+    public void AdicionarCategorias(View view) {
+        Intent intent = new Intent(this,addCategorie.class);
+        Toast.makeText(this, getString(R.string.Add_Categories), Toast.LENGTH_SHORT).show();
+        TextView editTextMessage = (TextView) findViewById(R.id.textViewCategorias);
 
-        if (textoCategorias.isEmpty()) {
-            editTextCategories.setError("Enter Categories");
-            editTextCategories.requestFocus();
+        String message = editTextMessage.getText().toString();
+
+
+        if (message.trim().length() != 0 ) {
+            Toast.makeText(this, getString(R.string.categories_advice), Toast.LENGTH_SHORT).show();
             return;
-
         }
-        Intent intent = new Intent(this, MainActivity.class);
+       startActivity(intent);
+    }
+    public void EditarCategorias(View view) {
+        Intent intent = new Intent(this, addCategorie.class);
+        Toast.makeText(this, getString(R.string.edit_categories), Toast.LENGTH_SHORT).show();
 
-        Toast.makeText(this, "Categories Saved", Toast.LENGTH_SHORT).show();
+        TextView editTextMessage = (TextView) findViewById(R.id.textViewCategorias);
 
+        String textoCategorias = editTextMessage.getText().toString();
+
+        if (textoCategorias.trim().length() == 0) {
+            Toast.makeText(this,getString(R.string.add_categories), Toast.LENGTH_SHORT).show();
+            return;
+        }
+        intent.putExtra(AppConsts.MESSAGE2, textoCategorias);
         startActivity(intent);
     }
-    public void cancel (View view) {
+    public void EliminarCategorias (View view){
+        Intent intent = new Intent(this, Deletecategories.class);
+        Toast.makeText(this, getString(R.string.delete_categories), Toast.LENGTH_SHORT).show();
 
-        finish();
-    }
-    public void delete (View view) {
-        Intent intent = new Intent(this, Delete.class);
-        intent.putExtra(AppConsts.MESSAGE, "delete page");
+        TextView editTextMessage = (TextView) findViewById(R.id.textViewCategorias);
 
+        String message = editTextMessage.getText().toString();
+        if (message.trim().length() == 0) {
+            Toast.makeText(this, getString(R.string.add_categories), Toast.LENGTH_SHORT).show();
+            return;
+        }
+        intent.putExtra(AppConsts.MESSAGE2, message);
         startActivity(intent);
     }
-    private void categories () {
+
+    private void mostraMensagem () {
         Intent intent = getIntent();
+        String textoCategorias = intent.getStringExtra(AppConsts.MESSAGE2);
+        TextView textViewUtilizador = (TextView) findViewById(R.id.textViewCategorias);
+        textViewUtilizador.setText(textoCategorias);
 
-        String message = intent.getStringExtra(AppConsts.MESSAGE);
-
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }

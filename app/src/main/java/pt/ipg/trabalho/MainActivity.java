@@ -1,11 +1,7 @@
 package pt.ipg.trabalho;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -13,7 +9,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,25 +44,25 @@ public class MainActivity extends AppCompatActivity {
     }
     public void startGame (View view) {
         Intent intent = new Intent(this, jogoActivity.class);
-        intent.putExtra(AppConsts.MESSAGE, "Game Started");
+        Toast.makeText(this, getString(R.string.game_started), Toast.LENGTH_SHORT).show();
 
         startActivity(intent);
     }
     public void perfil (View view) {
-        Intent intent = new Intent(this, Perfil.class);
-        intent.putExtra(AppConsts.MESSAGE, "Profile");
+        Intent intent = new Intent(this, Profile.class);
+        Toast.makeText(this, getString(R.string.profile), Toast.LENGTH_SHORT).show();
 
         startActivity(intent);
     }
     public void guardar (View view) {
         Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra(AppConsts.MESSAGE, "User Name Saved");
+        Toast.makeText(this, getString(R.string.User_name_saved), Toast.LENGTH_SHORT).show();
 
         startActivity(intent);
         }
     public void categories (View view) {
         Intent intent = new Intent(this, Categories.class);
-        intent.putExtra(AppConsts.MESSAGE, "Categories");
+        Toast.makeText(this, getString(R.string.title_activity_categories), Toast.LENGTH_SHORT).show();
 
         startActivity(intent);
     }

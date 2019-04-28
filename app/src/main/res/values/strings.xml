@@ -3,21 +3,41 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_menu" translatable="false">Menu</string>
     <string name="title_activity_jogo">Game</string>
-    <string name="title_activity_perfil">Profile</string>
+    <string name="title_activity_perfil">Edit Profile</string>
     <string name="quizz" translatable="false">Quizz</string>
     <string name="Start_Game">Start Game</string>
     <string name="profile">Profile</string>
     <string name="save">Save</string>
-    <string name="user_name">User Name</string>
+    <string name="user_name">User Name :</string>
     <string name="cancel">Cancel</string>
     <string name="edit">Edit</string>
     <string name="title_activity_categories">Categories</string>
-    <string name="save1">Save</string>
-    <string name="categories">Categories</string>
-    <string name="cancel1">Cancel</string>
+    <string name="categories">Categories :</string>
     <string name="delete">Delete</string>
     <string name="title_activity_delete">Delete</string>
-    <string name="cancel2">Cancel</string>
-    <string name="delete1">Delete</string>
-    <string name="user_name1">User name</string>
+    <string name="User_name_saved">User Name Saved</string>
+    <string name="categories_saved">Categories Saved</string>
+    <string name="enter_categories">Enter Categories</string>
+    <string name="deleted_w_success">Deleted with success</string>
+    <string name="profile_edited">"Profile Edited "</string>
+    <string name="game_started">Game Started</string>
+    <string name="delete_page">delete page</string>
+    <string name="Enter_user_name">Enter User Name</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="add">Add</string>
+    <string name="favorite_categories">Favorite Categories :</string>
+    <string name="title_activity_delete_profile">Delete Profile</string>
+    <string name="delete_profile">Delete Profile</string>
+    <string name="create_profile">Create a profile</string>
+    <string name="enter_favorite_categories">Enter favorite categories</string>
+    <string name="add_profile">Add Profile</string>
+    <string name="Add_Categories">Add Categories</string>
+    <string name="edit_categories">Edit Categories</string>
+    <string name="add_categories">Add Categories</string>
+    <string name="title_activity_add_categorie">add Categorie</string>
+    <string name="delete_categories">Delete Categories</string>
+    <string name="title_activity_deletecategories">Delete Categories</string>
+    <string name="categories_advice">You can only Edit, already have Categories</string>
+    <string name="profile_advice">You can only Edit, already have a profile</string>
+
 </resources>

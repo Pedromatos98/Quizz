@@ -22,13 +22,6 @@ public class jogoActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        startGame();
     }
-    private void startGame () {
-        Intent intent = getIntent();
 
-        String message = intent.getStringExtra(AppConsts.MESSAGE);
-
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-    }
 }

@@ -10,9 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Delete"
-            android:label="@string/title_activity_delete"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".Deletecategories"
+            android:label="@string/title_activity_deletecategories"
+            android:parentActivityName=".Categories"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pt.ipg.trabalho.Categories" />
+        </activity>
+        <activity
+            android:name=".addCategorie"
+            android:label="@string/title_activity_add_categorie"
+            android:parentActivityName=".Categories"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pt.ipg.trabalho.Categories" />
+        </activity>
         <activity
             android:name=".Categories"
             android:label="@string/title_activity_categories"
@@ -23,7 +37,25 @@
                 android:value="pt.ipg.trabalho.MainActivity" />
         </activity>
         <activity
-            android:name=".Perfil"
+            android:name=".DeleteProfile"
+            android:label="@string/title_activity_delete_profile"
+            android:parentActivityName=".Profile"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pt.ipg.trabalho.Profile" />
+        </activity>
+        <activity
+            android:name=".Profile"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pt.ipg.trabalho.MainActivity" />
+        </activity>
+        <activity
+            android:name=".EditProfile"
             android:label="@string/title_activity_perfil"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
