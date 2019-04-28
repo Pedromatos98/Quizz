@@ -4,5 +4,5 @@ Perguntas e respostas para diferentes categorias (Desporto,Arte,História,Ciênc
 Existirá também uma tabela que permite guardar dados do utilizador tais como a sua identificação, % de acerto e a melhor categoria
 
 
-
+![alt text](https://github.com/Pedromatos98/Quizz/blob/master/DiagramaQuizz.png)
 
