@@ -5,4 +5,4 @@ Existirá também uma tabela que permite guardar dados do utilizador tais como a
 
 
 
-![alt text](https://github.com/Pedromatos98/Quizz/blob/master/DiagramaQuizz.png)
+
