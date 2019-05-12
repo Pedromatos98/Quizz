@@ -1,6 +1,8 @@
 package pt.ipg.trabalho;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -14,7 +16,48 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Categories extends AppCompatActivity {
+    private long id;
+    private String descricao;
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+    public ContentValues getContentValues() {
+        ContentValues valores = new ContentValues();
+
+        valores.put(BdTableCategories.CAMPO_DESCRICAO, descricao);
+
+        return valores;
+    }
+
+    public static Categories fromCursor(Cursor cursor) {
+        long id = cursor.getLong(
+                cursor.getColumnIndex(BdTableCategories._ID)
+        );
+
+        String descricao = cursor.getString(
+                cursor.getColumnIndex(BdTableCategories.CAMPO_DESCRICAO)
+        );
+
+        Categories categoria = new Categories();
+
+        categoria.setId(id);
+        categoria.setDescricao(descricao);
+
+        return categoria;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,6 +1,8 @@
 package pt.ipg.trabalho;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +16,66 @@ import android.widget.Toast;
 import java.util.Date;
 
 public class Profile extends AppCompatActivity {
+    private long id;
+    private String Nome;
+    private String Categorias;
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return Nome;
+    }
+
+    public void setNome(String nome) {
+        Nome = nome;
+    }
+
+    public String getCategorias() {
+        return Categorias;
+    }
+
+    public void setCategorias(String categorias) {
+        Categorias = categorias;
+    }
+
+    public ContentValues getContentValues() {
+        ContentValues valores = new ContentValues();
+
+        valores.put(BdTableProfile.NOME_UTILIZADOR, Nome);
+        valores.put(BdTableProfile.CATEGORIAS_FAVORITAS, Categorias);
+
+        return valores;
+    }
+    public static Profile fromCursor(Cursor cursor) {
+        long id = cursor.getLong(
+                cursor.getColumnIndex(BdTableProfile._ID)
+        );
+
+        String nome = cursor.getString(
+                cursor.getColumnIndex(BdTableProfile.NOME_UTILIZADOR)
+        );
+
+        String categorias = cursor.getString(
+                cursor.getColumnIndex(BdTableProfile.CATEGORIAS_FAVORITAS)
+        );
+
+
+        Profile perfil = new Profile();
+
+        perfil.setId(id);
+        perfil.setNome(nome);
+        perfil.setCategorias(categorias);
+
+
+
+        return perfil;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
